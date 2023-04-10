@@ -17,8 +17,8 @@ const ProductCard = (props) => {
     let location = useLocation();
   return (
     <>
-        <div className= {` ${location.pathname === "/store" ? `gr-${grid}` : "col-3" } `}>
-            <Link to={` ${location.pathname == "/" ? "/product/:id" : location.pathname == "/product/:id" ? "/product/:id" : ":id"} `} className="product-card position-relative">
+        <div className= {` ${location.pathname === "/product" ? `gr-${grid}` : "col-3" } `}>
+            <Link to={` ${location.pathname === "/" ? "/product/:id" : location.pathname ==="/product/:id" ? "/product/:id" : ":id"} `} className="product-card position-relative">
                 <div className="wishlist-icon position-absolute">
                     <button className="border-0 bg-transparent">
                         <img src={wish} alt="wishlist" />
@@ -60,12 +60,12 @@ const ProductCard = (props) => {
                 </div>
             </Link>
         </div>
-        <div className= {` ${location.pathname === "/store" ? `gr-${grid}` : "col-3" } `}>
-            <Link to={` ${location.pathname == "/" ? "/product/:id" : location.pathname == "/product/:id" ? "/product/:id" : ":id"} `} className="product-card position-relative">
+        <div className= {` ${location.pathname === "/product" ? `gr-${grid}` : "col-3" } `}>
+            <Link to={` ${location.pathname === "/" ? "/product/:id" : location.pathname ==="/product/:id" ? "/product/:id" : ":id"}`} className="product-card position-relative">
                 <div className="wishlist-icon position-absolute">
-                    <Link>
+                    <button className='border-0 bg-transparent'>
                         <img src={wishlist} alt="wishlist" />
-                    </Link>
+                    </button>
                 </div>
                 <div className="product-image">
                     <img src="images/watch.jpg" className="img-fluid" alt="Product Image" />
